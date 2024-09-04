@@ -1,5 +1,5 @@
 const express = require('express');
-const { registerUser, Login, logout, showLoginPage, showRegisterPage, dashboard } = require('../controller/userController');
+const { registerUser, Login, logout, showLoginPage, showRegisterPage } = require('../controller/userController');
 const userRouter = express.Router();
 const {upload}  = require('../config/imageUpload')
 

@@ -1,6 +1,7 @@
 const User = require('../models/User')
 const bcrypt = require('bcrypt')
 const passport = require('passport')
+const flash = require('connect-flash')
 
 exports.showRegisterPage = (req, res) => res.render('register');
 
@@ -30,7 +31,7 @@ exports.registerUser = async (req, res) => {
         return res.redirect('/users/login');
     } catch (err) {
         console.log(err);
-        res.status(500).json({ msg: "internal server erro" })
+        res.status(500).json({ msg: "internal server error" })
     }
 };
 
